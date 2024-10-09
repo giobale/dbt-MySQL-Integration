@@ -1,0 +1,10 @@
+poc_project:
+  target: dev
+  outputs:
+    dev:
+      type: mysql
+      host: 127.0.0.1
+      user: root
+      password: amatriciana
+      schema: poc_db
+      port: 3306

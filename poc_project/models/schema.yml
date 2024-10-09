@@ -1,0 +1,32 @@
+
+version: 2
+
+models:
+  - name: country_value
+    description: "A model that calculates the value of a country"
+    columns:
+      - name: country
+        description: "The country name"
+        tests:
+          - unique
+          - not_null
+      - name: value
+        description: "The value of this country"
+        tests:
+          - unique
+          - not_null
+
+
+  - name: top_3_countries
+    description: "A model that selects the top 3 countries by revenue"
+    columns:
+      - name: country
+        description: "The country name"
+        tests:
+          - unique
+          - not_null
+      - name: revenue
+        description: "The revenue for this country"
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+IMAGE_NAME="${IMAGE_NAME:-poc_dbt_image}"
+
+# Debug: Print the full docker run command
+#echo "docker run --rm -it -v $PWD:/poc_project -v ~/.dbt/profiles.yml:/root/.dbt/profiles.yml --network='host' $IMAGE_NAME dbt $@"
+
+# Run the Docker command
+docker run --rm -it \
+    -v $PWD:/dbt \
+    -v ~/.dbt/profiles.yml:/root/.dbt/profiles.yml \
+    --network="host" \
+    $IMAGE_NAME dbt "$@"
